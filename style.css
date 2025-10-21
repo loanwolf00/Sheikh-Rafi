@@ -75,12 +75,69 @@
     .nav-left h1{font-size:30px;font-weight:600;}
     .nav-right input{padding:8px 16px;border-radius:20px;border:none;outline:none;width:250px; margin-left: 10px;}
 
+    /*mobile res*/
+
+    @media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem;
+  }
+
+  .nav-left,
+  .nav-center,
+  .nav-right {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+
+  .nav-left h1 {
+    font-size: 1.2rem;
+  }
+
+  .nav-center {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 0.9rem;
+  }
+
+  .nav-right {
+    justify-content: flex-end;
+  }
+
+  .nav-right input {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-left h1 {
+    font-size: 1rem;
+  }
+
+  .nav-center {
+    font-size: 0.8rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-right input {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+}
+
     /* SPLIT LAYOUT */
     /* ===== HERO SECTION WITH SPLIT VIDEO BACKGROUND ===== */
 
     .split{
       display:grid;grid-template-columns:1fr 1fr;
-      min-height:70vh;
+      min-height:auto;
     }
     h3{
       color: #00eaff;
@@ -92,7 +149,7 @@
     }
     .left,.right{padding:20px;overflow-y:auto;}
     .left{background:var(--dark-bg);color:var(--dark-text);}
-    .right{background:var(--dark-bg);color:var(--light-text);height: 70vh;}
+    .right{background:var(--dark-bg);color:var(--light-text);height:auto;}
     
 
     /* SHARED DESIGN STYLES FROM PREVIOUS VERSION */
@@ -142,6 +199,120 @@
       .split{grid-template-columns:1fr;}
       .hero{grid-template-columns:1fr 140px}
     }
+
+    /*mobile responsive*/
+
+    @media (max-width: 900px) {
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .profile {
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  .title h1 {
+    font-size: 36px;
+  }
+
+  .overview {
+    grid-template-columns: 1fr;
+  }
+
+  .past {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 20px;
+  }
+
+  .title h1 {
+    font-size: 28px;
+  }
+
+  .title p {
+    font-size: 0.95rem;
+  }
+
+  .section h2 {
+    font-size: 24px;
+  }
+
+  .platforms {
+    font-size: 16px;
+    gap: 8px;
+  }
+
+  .plat {
+    flex: 1 1 100%;
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .total h3 {
+    font-size: 22px;
+  }
+
+  .contact input,
+  .contact button {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .chip {
+    font-size: 0.85rem;
+    padding: 6px 8px;
+  }
+}
+
+@media (max-width: 400px) {
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .title h1 {
+    font-size: 24px;
+  }
+
+  .title p {
+    font-size: 0.85rem;
+  }
+
+  .section h2 {
+    font-size: 20px;
+  }
+
+  .plat {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bar {
+    height: 20px;
+  }
+
+  .age-box {
+    flex-direction: column;
+  }
+  
+}
   
     /*projects--section*/
     /* ===== VIDEO BACKGROUND STYLES ===== */
@@ -401,7 +572,7 @@ section.projects2 {
 
     body {
       font-family: "Poppins", sans-serif;
-      background: #123b23;
+      background: #030905;
       color: #fff;
       overflow-x: hidden;
     }
