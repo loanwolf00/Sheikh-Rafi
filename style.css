@@ -820,3 +820,13 @@ button:hover ~ .cursor-container .cursor-circle,
 .cursor-container.active .cursor-hand {
   transform: translate(-50%, -50%) scale(0.8);
 }
+/* Hide custom cursor on small screens */
+@media (max-width: 768px) {
+  .cursor-container {
+    display: none !important;
+  }
+  .cursor-container {
+  transition: opacity 0.3s ease;
+}
+}
+

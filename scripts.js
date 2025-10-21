@@ -74,6 +74,19 @@ document.addEventListener('mouseup', () => {
   cursor.classList.remove('active');
 });
 
+// Hide cursor when mouse leaves the window
+document.addEventListener('mouseleave', () => {
+  cursor.style.opacity = '0';
+});
+
+// Show cursor again when mouse re-enters
+document.addEventListener('mouseenter', () => {
+  cursor.style.opacity = '1';
+  if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+  cursor.style.display = 'none';
+}
+});
+
 //FOOTER
 
     const contactLink = document.getElementById('contactLink');
